@@ -44,7 +44,7 @@ h1{margin-top:22px;font-size:clamp(44px,7.4vw,88px);font-weight:500;letter-spaci
 .cta i{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:linear-gradient(180deg,#46e8a4,#1fa972);font-style:normal;color:#fff;font-size:12px}
 .pre{margin-top:70px;font-size:12px;color:#d0d4d2}
 .cards{margin-top:14px;display:flex;gap:6px}
-.card{width:92px;height:76px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:11px;line-height:1.15;color:#e6e6e6;transition:border-color .25s,transform .25s}
+.card{width:92px;height:76px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:11px;line-height:1.15;color:#e6e6e6;cursor:pointer;transition:border-color .25s,transform .25s}
 .card:hover{border-color:rgba(120,255,200,.5);transform:translateY(-2px)}
 .card em{display:grid;place-items:center;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.08);font-style:normal;font-size:12px}
 @media(max-width:720px){.menu{display:none}nav{padding:16px}.cards{flex-wrap:wrap;justify-content:center}}
@@ -56,6 +56,8 @@ h1{margin-top:22px;font-size:clamp(44px,7.4vw,88px);font-weight:500;letter-spaci
 @font-face{font-family:"Joystix Monospace";src:local("Joystix Monospace"),local("Joystix"),url("fonts/joystix.woff2") format("woff2"),url("fonts/joystix.ttf") format("truetype");font-display:swap}
 :root{--mono:"Joystix Monospace","Joystix","Press Start 2P",ui-monospace,Menlo,Consolas,monospace}
 html,body,button,input,select,pre{font-family:var(--mono)}
+button,input[type="button"],input[type="submit"],input[type="reset"],[role="button"],.btn,.cta,.card,[data-open],[data-close],select,input[type="checkbox"]{cursor:pointer}
+button:disabled,input:disabled{cursor:not-allowed}
 .logo{font-size:14px;letter-spacing:0}
 .menu a{font-size:9px;padding:9px 10px}
 .btn,.cta{font-size:9px;font-weight:400}
@@ -71,7 +73,7 @@ nav{gap:28px}
 .menu a:hover{color:var(--g);background:transparent}
 @media(max-width:1000px){.menu{display:none}}
 
-.btn,.btn.w,.cta,.card{background:none;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;color:#fff;transition:color .2s}
+.btn,.btn.w,.cta,.card{background:none;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;color:#fff;cursor:pointer;transition:color .2s}
 .btn,.btn.w{padding:8px 4px}
 .btn.w{color:var(--g)}
 .btn:hover,.cta:hover,.card:hover{color:var(--g)}
@@ -112,11 +114,11 @@ nav{gap:28px}
 #ws input:focus,#ws select:focus,#tm input:focus,#tm select:focus{border-bottom-color:var(--g)}
 #ws td input,#ws td select{width:84px;border-bottom-color:transparent}
 #ws tr:hover td input,#ws tr:hover td select{border-bottom-color:var(--line)}
-#ws input[type=checkbox]{width:auto;accent-color:var(--g)}
+#ws input[type=checkbox]{width:auto;accent-color:var(--g);cursor:pointer}
 option{background:#0a0f0d}
 .row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:26px}
 .row label{display:flex;flex-direction:column;gap:6px;color:var(--mu);font-size:8px;letter-spacing:.14em;text-transform:uppercase}
-#ws button.b,#ws button.g,#ws button.d{padding:8px 0;border:0;background:none;font-size:9px;cursor:pointer;transition:color .2s}
+#ws button,#ws button.b,#ws button.g,#ws button.d{padding:8px 0;border:0;background:none;font-size:9px;cursor:pointer;transition:color .2s}
 #ws button.b{color:var(--g)}
 #ws button.g{color:var(--mu)}
 #ws button.d{color:var(--bad)}
